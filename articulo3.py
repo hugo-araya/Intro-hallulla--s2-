@@ -7,9 +7,16 @@
 # Datos de entrada: articulo(string), codigo(string), precio_o(Entero)
 # Dato salida: precio_d (float)
 
-articulo = input('Nombre del articulo: ')
-codigo = input('Ingrese codigo: ')
-precio_o = int(input('Precio: '))
+import os 
+
+if os.name == "posix":
+   os.system("clear")
+else:
+   os.system ("cls")
+
+articulo = input('-->> Nombre del articulo: ')
+codigo = input('--> Ingrese codigo: ')
+precio_o = int(input('--> Precio: '))
 
 if (codigo == '01'):
     precio_d = precio_o * 0.9
@@ -19,6 +26,6 @@ else:
     else:
         codigo = "Codigo no existe"
         precio_d = 0
-print('Articulo: ' ,articulo)
-print('Codigo: ', codigo)
-print('Precio con descuento: ' ,precio_d)
+print('\tArticulo: \n\t\t' ,articulo)
+print('\tCodigo: ', codigo)
+print('\tPrecio con descuento: ' ,precio_d)
